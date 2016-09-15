@@ -10,11 +10,18 @@ def run_all():
 
 class TestTexDownload(unittest.TestCase):
 	"""Test the functionality of the tex downloading"""
+	def setUp(self):
+		"""Download the tex source"""
+		self.tex_source = download_tex(TEST_MODEL)
+
 	def test_throughput(self):
 		"""Test that we are getting tex source code"""
-		tex_source = download_tex(TEST_MODEL)
-		self.assertTrue(isinstance(tex_source, type("string")))
-		self.assertGreater(len(tex_source), 1000)
+		self.assertTrue(isinstance(self.tex_source, type("string")))
+		self.assertGreater(len(self.tex_source), 1000)
+
+	def test_latex(self):
+		"""Test that there is actual latex"""
+		self.assertTrue(self.tex_source.find('documentclass') != -1)
 
 class TestTexParse(unittest.TestCase):
     """Test the functionality of the tex parsing"""
