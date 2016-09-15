@@ -37,10 +37,10 @@ def parse_tex(tex_source):
 	models = []
 	models.append({
 		'equation':{
-			'symbolic': sympify('x'),
+			'symbolic': sympify('v^-2'),
 			'description': {
 				'returns': 'luminosity',
-				'x':'frequency'}
+				'v':'frequency'}
 				},
 		'source':'frb',
 		'keywords': ['radio', 'fast', 'single pulse']
