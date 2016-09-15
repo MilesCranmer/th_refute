@@ -15,5 +15,7 @@ This program will download a research paper from arxiv, and (eventually) look fo
 ## Dependencies:
 
 sympy (For storing symbolic models)
+
 astropy, numpy (For computation with units)
+
 urllib2, gzip (For downloading from arxiv)
