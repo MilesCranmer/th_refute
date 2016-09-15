@@ -4,9 +4,9 @@ Python 2.7
 
 Toy program to automatically parse a research paper and test the models.
 
-My hope is that this program could eventually do this live, and output statistics as it goes. Hopefully this program/idea is helpful for the research process -- a lot more could be automated.
+This programs aims to answer the question: how much of the research process **itself** can we automate?
 
-This programs aims to answer the question: much of the research process **itself** can we automate?
+My hope is that this program could eventually do this live, and output statistics as it goes. Hopefully this program/idea is helpful for the research process -- a lot more could be automated.
 
 Eventually I feel this sort of thing will come of age, but I think it would be interesting if you could demonstrate it *right now* on special cases. 
 
