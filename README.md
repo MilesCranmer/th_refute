@@ -1,4 +1,5 @@
-# th_refute
+# Automated paper refuter
+
 Python 2.7
 
 Toy program to automatically parse a research paper and test the models against data.
