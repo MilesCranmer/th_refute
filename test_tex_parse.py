@@ -1,7 +1,7 @@
 """@module This program currently holds unit tests for th_refute"""
 
 import unittest
-from tex_parse import download_tex, parse_tex
+from tex_parse import download_tex, parse_tex, clean_tex
 
 TEST_MODEL = "1401.6674"
 
@@ -25,7 +25,9 @@ class TestTexDownload(unittest.TestCase):
 
 	def test_equations(self):
 		"""Make sure there are many equations"""
-		self.assertGreater(self.tex_source.count("\\begin{equation}"))
+		self.assertGreater(
+			clean_tex(self.tex_source).count("\\begin{equation}"),
+			5)
 
 class TestTexParse(unittest.TestCase):
     """Test the functionality of the tex parsing"""

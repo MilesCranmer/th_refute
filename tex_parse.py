@@ -21,9 +21,19 @@ def download_tex(arxiv_handle_str, filename='th_refute_intermediate_file'):
     assert tex_source.find('documentclass') != -1
     return tex_source
 
+def apply_newcommands(tex_source):
+	"""Apply macros to tex file"""
+	tex_source = tex_source.replace("\\eqb", "\\begin{equation}")
+	tex_source = tex_source.replace("\\eqe", "\\end{equation}")
+	return tex_source
+
+def clean_tex(tex_source):
+	"""Clean up the tex file for parsing"""
+	return apply_newcommands(tex_source)
+
 def parse_tex(tex_source):
 	"""Parse tex source code for model descriptions"""
-	tex_source = apply_newcommands(tex_source)
+	tex_source = tex_source
 	models = []
 	models.append({
 		'equation':{
