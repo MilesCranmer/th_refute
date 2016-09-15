@@ -5,3 +5,7 @@ Eventually I feel this will come of age, but I think it would be interesting if 
 How much of this process can we automate?
 
 This program will (eventually) download a pdf, look for testable equations/models, metaprogram a test script, automatically download relevant data, and try a fit.
+
+## Dependencies:
+
+[PDFMiner](https://github.com/goulu/pdfminer)
