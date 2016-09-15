@@ -16,13 +16,14 @@ def download_tex(arxiv_handle_str, filename='th_refute_intermediate_file'):
     compressed_file.write(response.read())
     compressed_file.seek(0)
     decompressed_file = gzip.GzipFile(fileobj=compressed_file, mode='rb')
-    
+
     tex_source = decompressed_file.read()
     assert tex_source.find('documentclass') != -1
     return tex_source
 
 def parse_tex(tex_source):
 	"""Parse tex source code for model descriptions"""
+	tex_source = apply_newcommands(tex_source)
 	models = []
 	models.append({
 		'equation':{

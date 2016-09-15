@@ -23,6 +23,10 @@ class TestTexDownload(unittest.TestCase):
 		"""Test that there is actual latex"""
 		self.assertTrue(self.tex_source.find('documentclass') != -1)
 
+	def test_equations(self):
+		"""Make sure there are many equations"""
+		self.assertGreater(self.tex_source.count("\\begin{equation}"))
+
 class TestTexParse(unittest.TestCase):
     """Test the functionality of the tex parsing"""
     def test_throughput(self):
