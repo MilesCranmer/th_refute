@@ -1,4 +1,4 @@
-# Automated paper refuter
+# Automated theory refute
 
 Python 2.7
 
