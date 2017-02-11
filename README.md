@@ -1,4 +1,5 @@
 # Automated theory refute
+(Nowhere near complete. This is something I will spend more time on in grad school (Fall 2018-...).)
 
 Python 2.7
 
